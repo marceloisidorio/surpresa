@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Incluindo o jQuery -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="overlay">
+        <button id="openButton">Abrir</button>
+    </div>
+    
+    <div id="mainContent">
+        <div class="container">
+            <h1>TEMPO JUNTOS</h1>
+            <div class="line"></div>
+            <div class="countdown">
+                <div class="time-unit">
+                    <span id="years">00</span>
+                    <p>ANOS</p>
+                </div>
+                <div class="time-unit">
+                    <span id="months">00</span>
+                    <p>MESES</p>
+                </div>
+                <div class="time-unit">
+                    <span id="days">00</span>
+                    <p>DIAS</p>
+                </div>
+                <div class="time-unit">
+                    <span id="hours">00</span>
+                    <p>HORAS</p>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes">00</span>
+                    <p>MINUTOS</p>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds">00</span>
+                    <p>SEGUNDOS</p>
+                </div>
+            </div>
+            <p id="random-phrase">Amor, cada segundo ao seu lado torna minha vida mais especial.<br>Obrigado por cada sorriso, cada abraço e cada momento que vivemos juntos.</p>
+        </div>
+
+        <div id="about-us">
+            <h1>QUEM SOMOS?</h1>
+            <div class="line"></div>
+            <img src="images/img2.jpg" class="image" alt="" style="width: 50%;">
+            <p>
+                Somos aquele casal diferenciado que todo mundo percebe. Nos conhecemos na faculdade, e no começo a gente até se estranhava, mas com o tempo, a amizade surgiu e nunca mais nos desgrudamos. Lembro da primeira vez que dei algo pra ela — uma caixa de Bis branco — e pedi pra abrir só quando chegasse em casa. Também foi assim, acompanhando ela no ponto de ônibus, que nos aproximamos de verdade. Ah, e o primeiro beijo? Sim, foi ela quem me beijou! Desde então, temos crescido e nos moldado um ao outro, sempre buscando ser melhores.
+            </p>
+            <p>
+                Nosso relacionamento nunca foi só a dois. Desde o início, Deus esteve presente. Lembro de quando ela levou a Bíblia pra faculdade, e passamos a tarde lendo juntos na praça. Sei que foi Deus quem a colocou na minha vida. Ele começou essa história, e quero que Ele seja o centro até o fim.
+            </p>
+            <p>
+                Ela é minha amiga, minha namorada, minha confidente e, acima de tudo, o amor da minha vida. Eu te amo, e vou continuar te amando até a vinda de Jesus. Que Ele nos fortaleça sempre, porque um cordão de três dobras não se rompe facilmente. ❤️
+            </p>
+        </div>
+
+        <audio id="background-music">
+            <source src="media/musica.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+
+        <div class="gallery">
+            <h2>Nosso Álbum</h2>
+            <div class="gallery-grid">
+                <div>
+                    <img src="images/img1.jpg" alt="Imagem 1" class="gallery-item image">
+                </div>
+                <div><img src="images/img2.jpg" alt="Imagem 2" class="gallery-item image"></div>
+                <img src="images/img3.jpg" alt="Imagem 3" class="gallery-item image">
+                <img src="images/img4.jpg" alt="Imagem 4" class="gallery-item image">
+                <!-- Adicione mais imagens aqui -->
+            </div>
+        </div>
+
+        <div id="imageModal" class="modal">
+            <div class="modal-content">
+                <img id="modalImage" src="" alt="Imagem do Modal">
+            </div>
+        </div>
+        
+        <div id="modalBackground" class="modal-background"></div>
+        
+    </div>
+    <footer class="footer">
+        <p>Feito pelo amor da sua vida</p>
+    </footer>
+    
+    <!--div class="timeline">
+        <div class="timeline-bar" id="timeline-bar"></div>
+    </div-->
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

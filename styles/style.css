@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+    height: 100% !important;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #d9eff9;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+}
+
+#mainContent {
+    display: none;
+    padding: 15px;
+}
+
+.container {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.line {
+    width: 50px;
+    height: 4px;
+    background: #e60e48;
+    margin: 10px auto 20px auto;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px; /* Espaçamento entre as unidades de tempo */
+    margin: 20px 0;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px; /* Tamanho mínimo para cada unidade de tempo */
+}
+
+.time-unit span {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    color: #e60e48;
+    letter-spacing: -1px; /* Ajuste para dar consistência ao espaçamento dos números */
+}
+
+.time-unit p {
+    font-size: 12px;
+    margin: 5px 0 0;
+}
+
+.notify-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.notify-form input {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.notify-form button {
+    padding: 10px 20px;
+    border: none;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.credits {
+    margin: 20px 0 10px 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.social-media a {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 20px;
+    height: 20px;
+}
+
+#random-phrase {
+    font-style: oblique;
+}
+
+@media (max-width: 768px) {
+    .time-unit {
+        min-width: 50px; /* Largura menor para caber melhor em dispositivos móveis */
+    }
+    .time-unit span {
+        font-size: 30px; /* Reduz o tamanho do texto */
+    }
+    .time-unit p {
+        font-size: 10px; /* Reduz o tamanho do rótulo */
+    }
+}
+
+/*sobre nós */
+#about-us {
+    padding: 25px;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#about-us img {
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#about-us p {
+    text-indent: 30px;
+    text-align: justify;
+}
+
+/* CORAÇÕES */
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(230, 14, 72);
+    transform: rotate(-45deg);
+    animation: float 5s infinite;
+}
+
+.heart::before, .heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #e60e48;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 10px;
+}
+
+@keyframes float {
+    0% {
+        bottom: 0;
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%;
+        opacity: 0;
+    }
+}
+
+/* timeline */
+.timeline {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.timeline-bar {
+    height: 100%;
+    width: 0%;
+    background: #e60e48;
+    transition: width 0.5s;
+}
+
+/* player */
+#background-music {
+    display: none;  /* Esconde o player de áudio */
+}
+
+#play-pause {
+    display: none;  /* Esconde o botão de play/pause */
+}
+
+/* Galeria */
+.gallery {
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+.gallery-item {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos do modal */
+.modal {
+    display: none;  /* O modal começa escondido */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+/* Estilos para o modal */
+.modal-content img {
+    width: 100%; /* A imagem ocupará 100% da largura do modal */
+    max-width: 80%; /* Limita a largura máxima da imagem para 80% da largura do modal */
+    max-height: 80vh; /* Limita a altura máxima da imagem a 80% da altura da tela */
+    object-fit: contain; /* Garante que a imagem se ajuste sem distorcer */
+    margin: 0 auto; /* Centraliza a imagem */
+    display: block; /* Faz com que a imagem seja exibida como um bloco, evitando espaços adicionais */
+}
+
+
+
+/* Fundo do modal */
+.modal-background {
+    display: none;  /* Fundo do modal também começa invisível */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Cor de fundo semitransparente */
+    z-index: 999;
+}
+
+/* botão abrir */
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Fundo translúcido combinando com o estilo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#openButton {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #e60e48;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#openButton:hover {
+    transform: scale(1.1);
+    background-color: #c50d3c;
+}
+
+#openButton:active {
+    transform: scale(1.05);
+    background-color: #a00b32;
+}
+
+/* rodapé */
+.footer {
+    display: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    padding: 1px;
+    font-size: 14px;
+    background-color: #e60e48;
+}
