@@ -4,7 +4,6 @@ $(document).ready(function () {
             $('#mainContent').fadeIn(500);
             $('.footer').fadeIn(500);
             $('body').css('overflow-y', 'auto');
-            document.title = 'Casal Diferenciado';
         });
         
         iniciarPagina();
@@ -13,7 +12,7 @@ $(document).ready(function () {
 
 function iniciarPagina() {
     player();
-    //atualizarTimeline();
+    atualizarTimeline();
     atualizarContador(); // Chama a função para exibir o contador assim que a página carrega
     gerarFrasesAleatorias();
     setInterval(createHeart, 1000);
